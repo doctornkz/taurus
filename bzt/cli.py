@@ -319,7 +319,7 @@ class CLI(object):
 
     def __handle_taurus_exception(self, exc, log_level):
         if isinstance(exc, TaurusConfigError):
-            self.log.log(log_level, "Config Error: %s", exc)
+            self.log.log(log_level, "Config !!! Error: %s", exc)
         elif isinstance(exc, TaurusInternalException):
             self.log.log(log_level, "Internal Error: %s", exc)
         elif isinstance(exc, ToolError):

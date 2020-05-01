@@ -80,6 +80,8 @@ modules:
   # online services integrations
   blazemeter:
     class: bzt.modules.blazemeter.BlazeMeterUploader
+  signalfx:
+    class: bzt.modules.signalfx.SignalfxUploader
   cloud:
     class: bzt.modules.blazemeter.CloudProvisioning
   proxy2jmx:

@@ -30,6 +30,7 @@ from bzt import TaurusInternalException, TaurusConfigError
 from bzt.engine import Reporter
 from bzt.modules.aggregator import DataPoint, KPISet, AggregatorListener, ResultsProvider
 from bzt.modules.blazemeter import BlazeMeterUploader, CloudProvisioning
+from bzt.modules.signalfx import SignalfxUploader, CloudProvisioning
 from bzt.modules.functional import FunctionalAggregatorListener
 from bzt.modules.passfail import PassFailStatus
 from bzt.six import etree, iteritems, string_types, integer_types
@@ -514,7 +515,6 @@ def get_bza_report_info(engine, log):
         if len(result) > 1:
             log.warning("More than one blazemeter reporter found")
     return result
-
 
 class XUnitFileWriter(object):
     REPORT_FILE_NAME = "xunit"
